@@ -1,0 +1,203 @@
+:root {
+    --azulOscuro: #172449;
+    --azulClaro: #4676B4;
+    --gradiente: linear-gradient(90deg, #091E3E 0%, #CFF4FC 100%);
+    --gradiente2: linear-gradient(90deg, rgba(23, 36, 73, 0.75) 0%, rgba(70, 118, 180, 0.50) 100%);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+body {
+    font-family: 'Lato', sans-serif;
+}
+a {
+    text-decoration: none;
+}
+
+/* Infobar */
+.info-bar {
+    background-color: var(--azulClaro);
+    height: auto;
+}
+.iconos,
+.nav-link,
+.galeria img,
+.nosotros img {
+    transition: all .2s linear;
+}
+.iconos:hover,
+.nav-link:hover,
+.galeria img:hover,
+.nosotros img:hover {
+    transform: scale(1.1);
+}
+
+/* Animacion cards */
+.card,
+.tratamientos li {
+    transition: all 0.2s linear;
+}
+.card:hover,
+.tratamientos li:hover {
+    transform: scale(1.05);
+}
+
+/* Navbar */
+nav {
+    background-color: var(--azulOscuro);
+    height: auto;
+}
+.navbar-toggler.custom-toggler {
+    border: solid 2px white;
+}
+
+/* Hero */
+.hero {
+    background: var(--gradiente2), url('img/hero.png');
+    height: 80vh;
+    width: auto;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.hero h1 {
+    font-size: calc(2rem + 4.5vw);
+    text-shadow: 0rem .4rem .4rem rgba(0, 0, 0, 0.25);
+    font-weight: bold;
+}
+.hero h2 {
+    font-weight: bold;
+}
+
+/* Separador */
+.separador {
+    height: auto;
+    background-color: var(--azulOscuro) ;
+    color: white;
+    padding: 2rem;
+}
+
+/* Galeria Carousel */
+@media (max-width:768px) {
+    .carousel-item img,
+    .banner img {
+        height: 24rem;
+        object-fit: cover;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+}   
+.carousel-item img,
+.banner img {
+    height: 36rem;
+    width: 100%;
+    filter: brightness(75%);
+    object-fit: cover;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Tratamientos */
+.bi-heart-pulse-fill {
+    color: var(--azulOscuro);
+}
+
+/* Galeria */
+.galeria img {
+    height: 30rem;
+    width: auto;
+}
+
+/* Contacto */
+.mapa {
+    width: 100%;
+    height: 36rem;
+}
+.bg-contacto {
+    background-color: var(--azulOscuro);
+    height: auto;
+}
+.boton-contacto {
+    background-color: var(--azulClaro);
+    color: white;
+    border-radius: 20px;
+    font-size: 2.4rem;
+    text-transform: uppercase;
+}
+.boton-contacto:hover {
+    background-color: var(--azulOscuro);
+    color: white;
+}
+footer {
+    background-color: var(--azulClaro);
+    height: auto;
+}
+
+/* To-top */
+.to-top {
+    position: fixed;
+    background-color: var(--azulClaro);
+    border-radius: 50%;
+    color: white;
+    bottom: 2rem;
+    right: 2rem;
+    width: 7rem;
+    height: 7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3.2rem;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.4s;
+}
+.to-top.active {
+    opacity: 1;
+    pointer-events: auto;
+    bottom: 2rem;
+}
+.to-top.active:hover {
+    background-color: var(--azulOscuro);
+}
+
+/* Boton Whatsapp */
+.boton-whatsapp {
+    position: fixed;
+    background-color: var(--azulClaro);
+    border-radius: 50%;
+    color: white;
+    bottom: 10rem;
+    right: 2rem;
+    width: 7rem;
+    height: 7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4rem;
+    text-decoration: none;
+    transition: all 0.4s;
+}
+.boton-whatsapp:hover {
+    background-color: var(--azulOscuro);
+}
+
+/* Animacion fade reveal */
+.reveal {
+    position: relative;
+    transform: translateY(15rem);
+    opacity: 0;
+    transition: opacity 1s ease;
+    transition: .75s all ease;
+}
+.reveal.active {
+    transform: translateY(0);
+    opacity: 1;
+}
