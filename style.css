@@ -112,10 +112,15 @@ nav {
 
 /* Galeria */
 .galeria img {
-    height: 30rem;
-    width: auto;
+    width: 30rem;
+    max-height: 100%;
+    background-size: cover;
 }
-
+@media (max-width:300px) {
+    .galeria img {
+        width: 20rem;
+    }
+}
 /* Contacto */
 .mapa {
     width: 100%;
